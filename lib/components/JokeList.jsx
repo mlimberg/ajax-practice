@@ -1,8 +1,8 @@
 import React from 'react';
 import Joke from './Joke';
 
-const JokeList = ({ jokes }) => {
-  if(!jokes.length) {
+const JokeList = ({ jokes, showJokes }) => {
+  if(!jokes.length || !showJokes) {
     return (
       <p>Click to add some jokes!</p>
     )

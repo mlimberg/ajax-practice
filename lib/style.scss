@@ -30,7 +30,10 @@ h1 {
 }
 
 .controls button {
-  border: none;
+  min-height: 35px;
+  border: 2px solid;
+  background-color: white;
+  color: black;
   margin-left: 5px;
   &:hover {
     cursor: pointer;
@@ -40,15 +43,37 @@ h1 {
 }
 
 .controls input {
+  height: 30px;
   text-align: center;
-  border: 1px solid gray;
+  border: 1px solid black;
   margin-right: 5px;
   width: 40px;
 }
 
 .controls input, .controls button {
-  height: 30px;
   outline: none;
   border-radius: 5px;
   font-size: 16px;
+}
+
+.counts {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin: auto;
+  justify-content: center;
+}
+
+.count-box {
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 5px;
 }
