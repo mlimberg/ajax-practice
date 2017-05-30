@@ -4,7 +4,7 @@ import Joke from './Joke';
 const JokeList = ({ jokes }) => {
   if(!jokes.length) {
     return (
-      <div>No Jokes, so sad!</div>
+      <p>No Jokes, so sad!</p>
     )
   }
 

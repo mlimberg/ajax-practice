@@ -1,20 +1,21 @@
 li {
-  font-size: 20px;
   background-color: black;
   color: white;
-  margin: 15px auto;
   padding: 10px;
   border-radius: 5px;
-  font-family: sans-serif;
   width: 75%;
 }
 
-h1 {
+li, p, h1 {
+  font-size: 20px;
+  font-family: sans-serif;
   margin: 10px auto;
+  text-align: center;
+}
+
+h1 {
   font-size: 40px;
   width: 30%;
-  font-family: sans-serif;
   border: 5px solid;
-  text-align: center;
   padding: 10px;
 }
