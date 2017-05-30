@@ -1,13 +1,14 @@
 import React from 'react';
 
-const Controls = ({ qty }) => {
+const Controls = ({ qty, setQty, getJokes }) => {
 
   return (
     <div className='controls'>
-      <input type='number'
+      <input type='text'
              placeholder={qty}
-             onChange={(e) => this.setState({ qty: parseInt(e.target.value) })}/>
-      <button>Get Jokes</button>
+             onChange={(e) => setQty(e.target.value)}/>
+
+      <button onClick={getJokes}>Get Jokes</button>
     </div>
   )
 }

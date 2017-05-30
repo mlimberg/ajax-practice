@@ -9,7 +9,6 @@ export default class Main extends Component {
     this.state = {
       jokes: [],
       qty: 10,
-
     }
   }
 
@@ -23,13 +22,24 @@ export default class Main extends Component {
     })
   }
 
+  setQty(qty) {
+    this.setState({ qty: parseInt(qty) })
+  }
+
+  getJokes() {
+    console.log('hit');
+    this.getData()
+  }
+
   render() {
     let { qty, jokes } = this.state;
     return (
       <div>
         <h1>JOKES!</h1>
-        <Controls qty={qty}/>
-        <JokeList jokes={jokes}/>
+        <Controls qty={qty}
+                  setQty={this.setQty.bind(this)}
+                  getJokes={this.getJokes.bind(this)} />
+        <JokeList jokes={jokes} />
       </div>
     )
   }

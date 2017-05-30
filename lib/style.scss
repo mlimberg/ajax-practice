@@ -3,7 +3,7 @@ li {
   color: white;
   padding: 10px;
   border-radius: 5px;
-  width: 75%;
+  width: 60%;
 }
 
 li, p, h1 {
@@ -30,12 +30,8 @@ h1 {
 }
 
 .controls button {
-  height: 30px;
   border: none;
-  border-radius: 5px;
   margin-left: 5px;
-  outline: none;
-  font-size: 16px;
   &:hover {
     cursor: pointer;
     background-color: black;
@@ -44,11 +40,15 @@ h1 {
 }
 
 .controls input {
-  height: 30px;
   text-align: center;
   border: 1px solid gray;
   margin-right: 5px;
-  outline: none;
   width: 40px;
+}
+
+.controls input, .controls button {
+  height: 30px;
+  outline: none;
   border-radius: 5px;
+  font-size: 16px;
 }

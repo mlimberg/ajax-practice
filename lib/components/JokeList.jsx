@@ -4,15 +4,14 @@ import Joke from './Joke';
 const JokeList = ({ jokes }) => {
   if(!jokes.length) {
     return (
-      <p>No Jokes, so sad!</p>
+      <p>Click to add some jokes!</p>
     )
   }
 
   return (
     <div>
       <ul>
-        {
-          jokes.map(joke => {
+        {jokes.map(joke => {
             return <Joke joke={joke} key={joke.id}/>
           })
         }
