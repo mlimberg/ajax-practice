@@ -14,7 +14,11 @@ export default class Main extends Component {
 
 
   setQty(qty) {
-    console.log(qty);
+    //add some codes
+  }
+
+  getJokes() {
+    //add some codes
   }
 
   render() {
@@ -23,7 +27,8 @@ export default class Main extends Component {
       <div>
         <h1>JOKES!</h1>
         <Controls qty={qty}
-                  setQty={this.setQty.bind(this)} />
+                  setQty={this.setQty.bind(this)}
+                  getJokes={this.getJokes.bind(this)}/>
         <JokeList jokes={jokes} showJokes={showJokes}/>
       </div>
     )
