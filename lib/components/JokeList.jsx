@@ -2,7 +2,7 @@ import React from 'react';
 import Joke from './Joke';
 
 const JokeList = ({ jokes, showJokes }) => {
-  if(!jokes.length || !showJokes) {
+  if(!jokes.length) {
     return (
       <p>Click to add some jokes!</p>
     )
@@ -11,10 +11,7 @@ const JokeList = ({ jokes, showJokes }) => {
   return (
     <div>
       <ul>
-        {jokes.map(joke => {
-            return <Joke joke={joke} key={joke.id}/>
-          })
-        }
+        {/* need some jokes here! */}
       </ul>
     </div>
   )
