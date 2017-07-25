@@ -141,9 +141,9 @@ Some additional information on the specifc methods can be found [here](https://a
 
 ---
 
-### Practice Time!
+## Practice Time!
 
-#### Step One:
+### Step One:
 
 Clone down **THIS** repo
 * `cd ajax-practice`
@@ -152,7 +152,7 @@ Clone down **THIS** repo
 
 Visit `http://localhost:8080/public/`
 
-#### Step Two:
+### Step Two:
 
 Working in the `Main.jsx` file, see if you can _`GET`_ data from this endpoint displaying in your console and then set it to the `jokes` array in state. 
 
@@ -162,13 +162,13 @@ http://api.icndb.com/jokes/random/10?exclude=[explicit]
 
 _HINT_: You'll probably want to ensure your component is fully rendered (*cough* Mounted *cough*) before grabbing the data.
 
-#### Step Three:
+### Step Three:
 
 Once you successfully have the jokes set in state, see if you can add some code to the `JokeList.jsx` file that will append the data to the DOM.
 
 _HINT:_ Look how the `jokes` array in state of the `Main` component is being passed down to the child components. Also, think grocery list...
 
-#### Step Four:
+### Step Four:
 
 You should now have 10 jokes displaying to the page on load. Now can you add some code so that when a user enters a new quantity in the input and presses `Get Jokes`, a new set of jokes matching that quantity appears? 
 
