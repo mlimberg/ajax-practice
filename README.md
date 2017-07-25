@@ -172,6 +172,14 @@ fetch("https://api.icndb.com/jokes/15")
   .then(data => console.log(data))
 ```
 
+Lastly, we can add in a `.catch()` to account for any errors we may run into.
+
+```
+fetch("https://api.icndb.com/jokes/15")
+  .then(data => data.json())
+  .then(data => console.log(data))
+  .catch(err => //do something else)
+```
 ---
 
 ## Practice Time!
