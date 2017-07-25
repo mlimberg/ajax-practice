@@ -116,7 +116,7 @@ Like basically all things in Javascript, we can sprinkle a little syntactic suga
 jQuery has incorporated AJAX functionality into its library to allow us to perform asynchronous tasks in a more readable fashion. Here is a sample request matching what we did above:
 
 ```
-$.get("http://api.icndb.com/jokes/15")
+$.get("https://api.icndb.com/jokes/15")
 ```
 
 Of course there is more to it in order to use the data returned by the server, but this is all it takes to ping those endpoints and request the data. 
@@ -124,7 +124,7 @@ Of course there is more to it in order to use the data returned by the server, b
 If we want to do something with the data, we can set a `callback` as a second argument that handles the data returned:
 
 ```
-$.get("http://api.icndb.com/jokes/15", (data) => {
+$.get("https://api.icndb.com/jokes/15", (data) => {
   //do something with the data
 })
 ```
@@ -132,12 +132,45 @@ $.get("http://api.icndb.com/jokes/15", (data) => {
 But what about if we request something that doesn't exist or the server is busted, how can we account for that? Great question! Because jQuery returns a jqXHR (or just an XMLHttpRequest object), we get with it a variety of tools for how to deal with the response. Here's one example:
 
 ```
-$.get("http://api.icndb.com/jokes/15")
+$.get("https://api.icndb.com/jokes/15")
   .then(data => //do something if data is returned)
   .catch(error => //do something if an error is returned)
 ```
 
 Some additional information on the specifc methods can be found [here](https://api.jquery.com/jquery.get/)
+
+### fetch()
+
+Another great tool to help with network requests is the [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). 
+
+From the docs:
+
+_The fetch() method takes one mandatory argument, the path to the resource you want to fetch. It returns a promise that resolves to the Response to that request, whether it is successful or not._
+
+We can nearly mimic the syntax above to perform the same network request, with a few minor tweaks. First we need to pass in the path we want to fetch from:
+
+```
+fetch("https://api.icndb.com/jokes/15")
+```
+
+Next we see that fetch returns a promise that resolves to the response of of our request. We haven't talked about promises yet, but all you need to know for now is that we can call `.then(callback)` which will execute our callback as soon as the response comes in...or in other words...it will wait until we have ALL of the data (or an error) back, `THEN` it will execute whatever we say to do next with that data.
+
+```
+fetch("https://api.icndb.com/jokes/15")
+  .then(data => console.log(data))
+```
+
+If you plug the code above into your console, you should see the Response object come back. There's one problem however, we can't seem to get the data we want from the Response.body. There's one more step to parse the data (much like you do when pulling things from localStorage). We'll need to use the **`Body.json()`** method that comes with fetch to parse it and call another `.then()`.
+
+From the docs, the `.json()` method returns "A promise that resolves with the result of parsing the body text as JSON. This could be anything that can be represented by JSON — an object, an array, a string, a number..."
+
+In short, it gives us access to the data!
+
+```
+fetch("https://api.icndb.com/jokes/15")
+  .then(data => data.json())
+  .then(data => console.log(data))
+```
 
 ---
 
