@@ -12,9 +12,11 @@
 
 ### What is this asynchronous thing all about?
 
-* **Synchronous:** Waiting in line at chipotle
+Let's say we're at a Red Robin for a night out on the town...Here's how the experience would go in each scenario:
 
-* **Asynchronous:** Eating at a sit-down restaurant
+* **Synchronous:** I order my food, everyone in the restaurant has to wait until I get my food before the next person can order
+
+* **Asynchronous:** Like, a normal restaurant experience where you'd tip the server at least 20%
 
 
 #### Example: `setTimeout()`
@@ -30,6 +32,22 @@ console.log("Wait for it...");
 ```
 
 setTimeout is actually an asynchronous function, which executes its callback after waiting for the allotted time to expire.
+
+#### Example 2:
+
+* **Synchronous:**
+
+```
+|<----A---->||<-----B--------->||<----C-------------->|
+```
+
+* **Asynchronous:**
+```
+|<-----------------A---------------------------->|
+     |<------------B---------------------------------->|
+             |<----C-------------->|
+  
+```
 
 
 #### Questions:
