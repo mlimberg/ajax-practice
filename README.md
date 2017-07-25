@@ -222,4 +222,5 @@ _HINT(S):_
 ##### Further Reading:
 
 * [The Evolution of Asyncronous Javascript](https://blog.risingstack.com/asynchronous-javascript/)
-* [Fetch docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+* [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+* [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
