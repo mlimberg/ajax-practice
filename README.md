@@ -60,7 +60,7 @@ setTimeout is actually an asynchronous function, which executes its callback aft
 
 ### What is AJAX?
 
-**A**synchronous **J**avaScript **A**nd **X**ML
+[**A**synchronous **J**avaScript **A**nd **X**ML](https://developer.mozilla.org/en-US/docs/AJAX)
 
 Cool, but really, what is it? 
 
