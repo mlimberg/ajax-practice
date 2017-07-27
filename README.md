@@ -118,7 +118,9 @@ First create a new instance of an XMLHttpRequest Object:
 var xhttp = new XMLHttpRequest();
 ```
 
-Next let's hit this funny but super innapropriate [Chuck Norris API](http://www.icndb.com/api/). We'll need to use the `GET` method, define our endpoint, and provide a 3rd argument of `TRUE` which tells the request to be asynchronous:
+Next let's initialize the request using the [`open()`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/open) method.
+
+We will hit this funny but super innapropriate [Chuck Norris API](http://www.icndb.com/api/). We'll need to use the `GET` method, define our endpoint, and provide a 3rd argument of `TRUE` which tells the request to be asynchronous:
 
 ```
 xhttp.open("GET", "http://api.icndb.com/jokes/15", true);
