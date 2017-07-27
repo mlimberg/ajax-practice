@@ -123,7 +123,7 @@ Next let's initialize the request using the [`open()`](https://developer.mozilla
 We will hit this funny but super innapropriate [Chuck Norris API](http://www.icndb.com/api/). We'll need to use the `GET` method, define our endpoint, and provide a 3rd argument of `TRUE` which tells the request to be asynchronous:
 
 ```
-xhttp.open("GET", "http://api.icndb.com/jokes/15", true);
+xhttp.open("GET", "https://api.icndb.com/jokes/476", true);
 ```
 
 Now let's send the request:
@@ -145,7 +145,7 @@ Like basically all things in Javascript, we can sprinkle a little syntactic suga
 jQuery has incorporated AJAX functionality into its library to allow us to perform asynchronous tasks in a more readable fashion. Here is a sample request matching what we did above:
 
 ```
-$.get("https://api.icndb.com/jokes/15")
+$.get("https://api.icndb.com/jokes/476")
 ```
 
 Of course there is more to it in order to use the data returned by the server, but this is all it takes to ping those endpoints and request the data. 
@@ -153,7 +153,7 @@ Of course there is more to it in order to use the data returned by the server, b
 If we want to do something with the data, we can set a `callback` as a second argument that handles the data returned:
 
 ```
-$.get("https://api.icndb.com/jokes/15", (data) => {
+$.get("https://api.icndb.com/jokes/476", (data) => {
   //do something with the data
 })
 ```
@@ -161,7 +161,7 @@ $.get("https://api.icndb.com/jokes/15", (data) => {
 But what about if we request something that doesn't exist or the server is busted, how can we account for that? Great question! Because jQuery returns a jqXHR (or just an XMLHttpRequest object), we get with it a variety of tools for how to deal with the response. Here's one example:
 
 ```
-$.get("https://api.icndb.com/jokes/15")
+$.get("https://api.icndb.com/jokes/476")
   .then(data => //do something if data is returned)
   .catch(error => //do something if an error is returned)
 ```
@@ -179,13 +179,13 @@ _The fetch() method takes one mandatory argument, the path to the resource you w
 We can nearly mimic the syntax above to perform the same network request, with a few minor tweaks. First we need to pass in the path we want to fetch from:
 
 ```
-fetch("https://api.icndb.com/jokes/15")
+fetch("https://api.icndb.com/jokes/476")
 ```
 
 Next we see that fetch returns a promise that resolves to the response of of our request. We haven't talked about promises yet, but all you need to know for now is that we can call `.then(callback)` which will execute our callback as soon as the response comes in...or in other words...it will wait until we have ALL of the data (or an error) back, `THEN` it will execute whatever we say to do next with that data.
 
 ```
-fetch("https://api.icndb.com/jokes/15")
+fetch("https://api.icndb.com/jokes/476")
   .then(data => console.log(data))
 ```
 
@@ -196,7 +196,7 @@ From the docs, the `.json()` method returns "A promise that resolves with the re
 In short, it gives us access to the data!
 
 ```
-fetch("https://api.icndb.com/jokes/15")
+fetch("https://api.icndb.com/jokes/476")
   .then(data => data.json())
   .then(data => console.log(data))
 ```
@@ -204,7 +204,7 @@ fetch("https://api.icndb.com/jokes/15")
 Lastly, we can add in a `.catch()` to account for any errors we may run into.
 
 ```
-fetch("https://api.icndb.com/jokes/15")
+fetch("https://api.icndb.com/jokes/476")
   .then(data => data.json())
   .then(data => console.log(data))
   .catch(err => //do something else)
