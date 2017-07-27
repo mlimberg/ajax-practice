@@ -68,13 +68,22 @@ _“the method of exchanging data with a server, and updating parts of a web pag
 
 ##### The two main benefits of AJAX are:
 
-1. Make requests to the server without reloading the page
+1. Make requests to the server without reloading the entire page
 2. Receive and work with data from the server
 
 ### How? 
 
+1. An event occurs in a web page (the page is loaded, a button is clicked)
+2. An XMLHttpRequest object is created by JavaScript
+3. The XMLHttpRequest object sends a request to a web server
+4. The server processes the request
+5. The server sends a response back to the web page
+6. The response is read by JavaScript
+7. Proper action (like page update) is performed by JavaScript
+
 Using the `XMLHttpRequest` object, developers can `GET` information to/from remote servers (among other tasks you'll learn more about in future mods). Depending on how the information is transmitted, the server should respond back with a [status code](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html). Here is a high-level summary of the status code ranges:
 
+_the XHR or `XMLHttpRequest` is a tool specific to the browser_
 
 ```
 1XX status codes have informational purposes
