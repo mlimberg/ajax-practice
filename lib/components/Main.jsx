@@ -14,22 +14,22 @@ export default class Main extends Component {
 
 
   setQty(qty) {
-    //add some codes
+    //add some code
   }
 
   getJokes() {
-    //add some codes
+    //add some code
   }
 
   render() {
-    let { qty, jokes, showJokes } = this.state;
+    let { qty, jokes } = this.state;
     return (
       <div>
         <h1>JOKES!</h1>
         <Controls qty={qty}
                   setQty={this.setQty.bind(this)}
                   getJokes={this.getJokes.bind(this)}/>
-        <JokeList jokes={jokes} showJokes={showJokes}/>
+        <JokeList jokes={jokes}/>
       </div>
     )
   }
