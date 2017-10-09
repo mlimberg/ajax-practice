@@ -1,7 +1,7 @@
 import React from 'react';
 import Joke from './Joke';
 
-const JokeList = ({ jokes, showJokes }) => {
+const JokeList = ({ jokes, showJokes, addFavorite }) => {
   if(!jokes.length || !showJokes) {
     return (
       <p>Click to add some jokes!</p>
@@ -12,7 +12,9 @@ const JokeList = ({ jokes, showJokes }) => {
     <div>
       <ul>
         {jokes.map(joke => {
-            return <Joke joke={joke} key={joke.id}/>
+            return <Joke joke={joke}
+                         key={joke.id}
+                         addFavorite={addFavorite}/>
           })
         }
       </ul>

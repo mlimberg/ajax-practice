@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Controls = ({ qty, setQty, getJokes }) => {
-
   return (
     <div className='controls'>
       <input type='text'
