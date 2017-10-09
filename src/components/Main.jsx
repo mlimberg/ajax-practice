@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 import JokeList from './JokeList';
 import Controls from './Controls';
+import getData from '../getData';
 
 export default class Main extends Component {
   constructor() {
@@ -15,13 +16,9 @@ export default class Main extends Component {
   }
 
   componentDidMount() {
-    this.getData()
-  }
-
-  getData() {
-    $.get(`http://api.icndb.com/jokes/random/${this.state.qty}?exclude=[explicit]`, (data) => {
-      this.setState({ jokes: data.value })
-    })
+    console.log('heyyyyy')
+    getData(`http://api.icndb.com/jokes/random/${this.state.qty}?exclude=[explicit]`)
+    .then(data => this.setState({ jokes: data.value }))
   }
 
   setQty(qty) {
