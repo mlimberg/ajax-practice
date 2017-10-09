@@ -16,7 +16,10 @@ export default class Main extends Component {
   }
 
   componentDidMount() {
-    console.log('heyyyyy')
+    this.getData()
+  }
+
+  getData() {
     getData(`http://api.icndb.com/jokes/random/${this.state.qty}?exclude=[explicit]`)
     .then(data => this.setState({ jokes: data.value }))
   }

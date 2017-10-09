@@ -1,4 +1,4 @@
-const jokes = {
+export const jokes = {
   value: [
     {
       joke: "Chuck Norris once ate four 30lb bowling balls without chewing.",
@@ -16,7 +16,6 @@ const jokes = {
 }
 
 const getData = url => {
-  console.log('mocked!')
   return new Promise(res => res(jokes))
 }
 
